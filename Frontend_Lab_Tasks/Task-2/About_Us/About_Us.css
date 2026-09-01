@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f1e7;
+    color: #342a25;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3b2f2f;
+    color: white;
+    padding: 70px 20px;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tagline {
+    color: #e58f35;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header h1 {
+    font-size: 55px;
+    margin: 5px 0 10px;
+}
+
+header p {
+    max-width: 600px;
+}
+
+nav {
+    background-color: #e58f35;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #3b2f2f;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: white;
+    margin: 40px 20px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.about-heading {
+    border-right: 2px solid #e58f35;
+    padding-right: 25px;
+}
+
+.about-heading span,
+.section-heading span {
+    color: #e58f35;
+    font-weight: bold;
+}
+
+.about-heading h2,
+.section-heading h2 {
+    color: #3b2f2f;
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.about-content {
+    padding-left: 35px;
+}
+
+.content-section {
+    background-color: white;
+    margin: 30px 20px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    margin: 0;
+}
+
+.description {
+    color: #756a64;
+}
+
+.movies {
+    background-color: #fff4e6;
+    padding: 20px 45px;
+    border-radius: 6px;
+}
+
+.movies li {
+    padding: 8px;
+}
+
+.movies li:first-child {
+    color: #d97706;
+    font-weight: bold;
+}
+
+.movies li:hover {
+    background-color: #ffe0b2;
+}
+
+.cities {
+    background-color: #f4efe9;
+    padding: 20px 45px;
+    border-radius: 6px;
+}
+
+.cities li {
+    padding: 8px;
+}
+
+.cities li:nth-child(even) {
+    color: #b45309;
+    font-weight: bold;
+}
+
+.cities li:hover {
+    color: #e58f35;
+}
+
+.mission-section {
+    background-color: #3b2f2f;
+    color: white;
+    margin: 30px 20px 50px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.mission-section h2 {
+    color: white;
+}
+
+.mission-section .section-heading span {
+    color: #e58f35;
+}
+
+.highlight {
+    color: #e58f35;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #241c1c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}

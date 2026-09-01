@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+.info {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+caption {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 12px;
+    text-align: center;
+}
+
+thead {
+    background-color: #263238;
+    color: white;
+}
+
+.java {
+    background-color: #ffe0b2;
+}
+
+.dbms {
+    background-color: #c8e6c9;
+}
+
+.dsa {
+    background-color: #bbdefb;
+}
+
+.web {
+    background-color: #e1bee7;
+}
+
+.maths {
+    background-color: #fff9c4;
+}
+
+.digital {
+    background-color: #b2dfdb;
+}
+
+.lab {
+    background-color: #d7ccc8;
+}
+
+.revision {
+    background-color: #f8bbd0;
+}
+
+.break {
+    background-color: #eeeeee;
+    font-weight: bold;
+}
+
+.focus {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: white;
+    border-left: 5px solid #263238;
+}
+
+.focus h3 {
+    margin-top: 0;
+}
