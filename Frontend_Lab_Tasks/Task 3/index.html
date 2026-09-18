@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone | Responsive Web Layout</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <h1 class="logo">TechZone</h1>
+      <p class="subtitle">Responsive Web Layout</p>
+    </div>
+
+    <nav class="top-nav">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Menu</h2>
+
+      <ul class="sidebar-menu">
+        <li><a href="#home"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="#products"><span class="icon">🛒</span> Products</a></li>
+        <li><a href="#blogs"><span class="icon">📝</span> Blogs</a></li>
+        <li><a href="#contact"><span class="icon">📞</span> Contact</a></li>
+      </ul>
+
+      <p class="sidebar-note">Built with HTML5 and CSS3 only.</p>
+    </aside>
+
+    <main class="content">
+
+      <section class="welcome" id="home">
+        <h2>Welcome to TechZone</h2>
+        <p>
+          TechZone is a small demo store built to practise responsive web layouts.
+          The page uses a sidebar for navigation, a product card that shows the CSS
+          box model, and a blog row arranged with Flexbox. Resize the browser window
+          to see the layout rearrange itself for tablets and phones.
+        </p>
+      </section>
+
+      <section class="products" id="products">
+        <h2 class="section-title">Featured Product</h2>
+
+        <article class="product-card">
+          <div class="product-image">⌚</div>
+
+          <h3 class="product-name">Smart Watch</h3>
+          <p class="product-text">
+            Fitness tracking, call alerts and a 7-day battery in a light
+            aluminium body.
+          </p>
+          <p class="product-price">₹1,999</p>
+
+          <button class="buy-btn">Buy Now</button>
+        </article>
+
+        <p class="box-note">
+          Box model used on this card &rarr; margin: 20px | padding: 20px | border: 2px solid
+        </p>
+      </section>
+
+      <section class="blogs" id="blogs">
+        <h2 class="section-title">Latest Blogs</h2>
+
+        <div class="blog-row">
+
+          <article class="blog-card">
+            <div class="blog-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>How HTML, CSS and JavaScript work together to build a web page.</p>
+            <a href="#blogs" class="read-more">Read More</a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-icon">📐</div>
+            <h3>CSS Flexbox</h3>
+            <p>Using a flex container and the flex property to build equal columns.</p>
+            <a href="#blogs" class="read-more">Read More</a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Media queries let one layout adapt to desktop, tablet and mobile screens.</p>
+            <a href="#blogs" class="read-more">Read More</a>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: support@techzone.example &nbsp;|&nbsp; Phone: +91 00000 00000</p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 TechZone &mdash; Task 3: Responsive Web Layout</p>
+  </footer>
+
+</body>
+</html>
