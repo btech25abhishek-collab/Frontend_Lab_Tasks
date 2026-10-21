@@ -1,0 +1,397 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080b1a;
+    color: white;
+}
+
+.navbar {
+    background-color: #10152b;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    color: #7cecff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #7cecff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #080b1a,
+        #171b3c,
+        #24133e
+    );
+}
+
+.hero-text {
+    padding: 25px;
+}
+
+.small-heading {
+    color: #7cecff;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #7cecff;
+}
+
+.description {
+    color: #d1d5e8;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #7cecff;
+    color: #080b1a;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px #7cecff55;
+}
+
+.space-art {
+    position: relative;
+    min-height: 420px;
+}
+
+.rocket {
+    position: absolute;
+    z-index: 2;
+    width: 85px;
+    height: 175px;
+    left: 45%;
+    top: 28%;
+    background: linear-gradient(
+        90deg,
+        #bfc5d9,
+        white 45%,
+        #aeb6e5
+    );
+    border-radius: 48% 48% 24% 24%;
+    box-shadow: 0 0 25px #7cecff70;
+    animation: rocket-flight 3s ease-in-out infinite;
+}
+
+.rocket::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    border-left: 42px solid transparent;
+    border-right: 42px solid transparent;
+    border-bottom: 40px solid #ff456e;
+}
+
+.rocket-window {
+    position: absolute;
+    z-index: 3;
+    width: 37px;
+    height: 37px;
+    top: 40px;
+    left: 24px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #7cecff,
+        #4c55b7
+    );
+}
+
+.rocket-flame {
+    position: absolute;
+    z-index: -1;
+    width: 35px;
+    height: 75px;
+    left: 25px;
+    bottom: -68px;
+    border-radius: 30% 30% 55% 55%;
+    background: linear-gradient(
+        to bottom,
+        #fff6a0,
+        #ff9c35 35%,
+        #ff456e 70%,
+        transparent
+    );
+    filter: drop-shadow(0 0 12px #ff653e);
+    animation: flame-flicker 0.2s ease-in-out infinite alternate;
+}
+
+.rocket-fin {
+    position: absolute;
+    bottom: 15px;
+    width: 25px;
+    height: 45px;
+    background-color: #ff456e;
+}
+
+.left-fin {
+    left: -18px;
+    border-radius: 80% 0 0 20%;
+    transform: skewY(-20deg);
+}
+
+.right-fin {
+    right: -18px;
+    border-radius: 0 80% 20% 0;
+    transform: skewY(20deg);
+}
+
+.star {
+    position: absolute;
+    color: #7cecff;
+    font-size: 28px;
+    animation: twinkle 1.5s ease-in-out infinite alternate;
+}
+
+.star-one {
+    top: 10%;
+    left: 15%;
+}
+
+.star-two {
+    top: 20%;
+    right: 8%;
+}
+
+.star-three {
+    bottom: 15%;
+    left: 45%;
+}
+
+.star-four {
+    bottom: 25%;
+    right: 15%;
+}
+
+.missions {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #0c1024;
+}
+
+.missions h2,
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #bfc5d9;
+    margin-bottom: 40px;
+}
+
+.mission-card {
+    height: 100%;
+    padding: 30px 20px;
+    background-color: #171d38;
+    border: 1px solid #2a345d;
+    border-radius: 15px;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    background-color: #222b50;
+}
+
+.mission-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    color: #7cecff;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.mission-card p {
+    color: #d1d5e8;
+    line-height: 1.6;
+}
+
+.about {
+    text-align: center;
+    padding: 75px 20px;
+    background-color: #171b3c;
+}
+
+.about p {
+    color: #d1d5e8;
+    margin: 20px 0 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #080b1a;
+    color: #bfc5d9;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes rocket-flight {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes flame-flicker {
+    from {
+        transform: scaleY(0.8);
+    }
+
+    to {
+        transform: scaleY(1.15);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .space-art {
+        min-height: 350px;
+        margin-top: 30px;
+    }
+
+    .rocket {
+        left: calc(50% - 42px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .space-art {
+        min-height: 300px;
+    }
+
+    .rocket {
+        width: 65px;
+        height: 135px;
+        left: calc(50% - 32px);
+        top: 30%;
+    }
+
+    .rocket::before {
+        top: -24px;
+        border-left-width: 32px;
+        border-right-width: 32px;
+        border-bottom-width: 32px;
+    }
+
+    .rocket-window {
+        width: 30px;
+        height: 30px;
+        left: 18px;
+        top: 30px;
+    }
+
+    .rocket-flame {
+        width: 27px;
+        height: 60px;
+        left: 19px;
+        bottom: -55px;
+    }
+
+    .rocket-fin {
+        bottom: 12px;
+        width: 20px;
+        height: 35px;
+    }
+
+    .left-fin {
+        left: -14px;
+    }
+
+    .right-fin {
+        right: -14px;
+    }
+
+    .missions h2,
+    .about h2 {
+        font-size: 29px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
