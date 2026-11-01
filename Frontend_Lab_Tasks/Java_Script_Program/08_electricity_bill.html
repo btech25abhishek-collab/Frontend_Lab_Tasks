@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+
+    <h2>Electricity Bill Calculator</h2>
+
+    <script>
+        let category = parseInt(prompt(
+            "Select Category:\n1. Domestic\n2. Commercial\n3. Industrial"
+        ));
+
+        let units = parseInt(prompt("Enter electricity units:"));
+
+        let rate = 0;
+
+        switch (category) {
+            case 1:
+                rate = 5;
+                break;
+
+            case 2:
+                rate = 8;
+                break;
+
+            case 3:
+                rate = 10;
+                break;
+
+            default:
+                document.write("Invalid Category");
+        }
+
+        if (category >= 1 && category <= 3) {
+            let bill = units * rate;
+
+            document.write("Units: " + units + "<br>");
+            document.write("Rate: Rs. " + rate + "<br>");
+            document.write("Total Bill: Rs. " + bill);
+        }
+    </script>
+
+</body>
+</html>

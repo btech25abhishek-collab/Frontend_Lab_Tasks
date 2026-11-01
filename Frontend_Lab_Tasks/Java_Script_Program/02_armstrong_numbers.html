@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Numbers</title>
+</head>
+<body>
+
+    <h2>Armstrong Numbers Between 100 and 999</h2>
+
+    <script>
+        for (let num = 100; num <= 999; num++) {
+            let temp = num;
+            let sum = 0;
+
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum = sum + digit * digit * digit;
+                temp = Math.floor(temp / 10);
+            }
+
+            if (sum == num) {
+                document.write(num + "<br>");
+            }
+        }
+    </script>
+
+</body>
+</html>
