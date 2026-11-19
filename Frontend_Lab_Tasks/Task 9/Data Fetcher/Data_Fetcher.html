@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetcher</title>
+    <link rel="stylesheet" href="Data_Fetcher.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Data Fetcher</h2>
+        <button id="fetchBtn">Fetch Server Data</button>
+        <p id="statusText">Click the button to simulate a server request.</p>
+        <ul id="dataList"></ul>
+    </div>
+
+    <script>
+        const fetchBtn = document.getElementById("fetchBtn");
+        const statusText = document.getElementById("statusText");
+        const dataList = document.getElementById("dataList");
+
+        function fetchServerData(shouldFail = false) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (shouldFail) {
+                        reject("Server error: Unable to load records.");
+                    } else {
+                        resolve([
+                            { id: 1, name: "Sharukh Khan", role: "Frontend Engineer" },
+                            { id: 2, name: "kritik Roshan", role: "UI Designer" },
+                            { id: 3, name: "Amitabh Bacchan", role: "Backend Developer" }
+                        ]);
+                    }
+                }, 2000);
+            });
+        }
+
+        function renderUsers(users) {
+            dataList.innerHTML = "";
+            users.forEach((user) => {
+                const li = document.createElement("li");
+                li.textContent = `${user.name} — ${user.role}`;
+                dataList.appendChild(li);
+            });
+        }
+
+        fetchBtn.addEventListener("click", () => {
+            fetchBtn.disabled = true;
+            dataList.innerHTML = "";
+            statusText.textContent = "Fetching data from server (2s delay)...";
+
+            fetchServerData(false)
+                .then((users) => {
+                    statusText.textContent = "Data loaded successfully:";
+                    renderUsers(users);
+                })
+                .catch((error) => {
+                    statusText.textContent = error;
+                })
+                .finally(() => {
+                    fetchBtn.disabled = false;
+                });
+        });
+    </script>
+
+</body>
+</html>

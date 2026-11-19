@@ -1,0 +1,88 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #0d0f14;
+    color: #f3f4f6;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.gallery {
+    max-width: 700px;
+    margin: auto;
+    background: #161a23;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid #262c3a;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+.gallery h2 {
+    font-family: "Trebuchet MS", "Arial Black", Impact, sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    color: #ffcc00;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#mainImage {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #2b3242;
+}
+
+#imageCaption {
+    font-family: "Consolas", "Courier New", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: #ff3b30;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 110px;
+    height: 72px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #2b3242;
+    border-radius: 8px;
+    transition: border-color 0.2s ease,
+                transform 0.2s ease,
+                opacity 0.2s ease,
+                box-shadow 0.2s ease;
+    opacity: 0.65;
+}
+
+.thumbnails img:hover,
+.thumbnails img:focus-visible {
+    border-color: #ff3b30;
+    opacity: 1;
+    outline: none;
+}
+
+.thumbnails img.active {
+    border-color: #ff3b30;
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.4);
+}

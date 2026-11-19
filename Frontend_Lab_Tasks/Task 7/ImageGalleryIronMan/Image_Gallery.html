@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man Image Gallery</title>
+    <link rel="stylesheet" href="Image_Gallery.css">
+</head>
+<body>
+
+    <div class="gallery">
+
+        <h2>IRON MAN COLLECTION</h2>
+
+        <img id="mainImage"
+             src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=900"
+             alt="Iron Man">
+
+        <p id="imageCaption">Iron Man</p>
+
+        <div class="thumbnails">
+
+            <img
+                class="active"
+                tabindex="0"
+                role="button"
+                src="https://static0.srcdn.com/wordpress/wp-content/uploads/2022/02/Iron-Man-3-Suit.jpg?q=50&fit=crop&w=825&dpr=1.5"
+                alt="Iron Man"
+                data-large="https://static0.srcdn.com/wordpress/wp-content/uploads/2022/02/Iron-Man-3-Suit.jpg?q=50&fit=crop&w=825&dpr=1.5">
+
+         <img
+    tabindex="0"
+    role="button"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmxTjAWjBtg_9l9_HXFDuGuJTB3WhD0quYxKsJDTWGWt4e4_liuWlSH8&s=10"
+    alt="JARVIS AI Interface"
+    data-large="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmxTjAWjBtg_9l9_HXFDuGuJTB3WhD0quYxKsJDTWGWt4e4_liuWlSH8&s=10">
+
+           <img
+    tabindex="0"
+    role="button"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2kKYEyx_WOTTWGOQQ-3l8xaoZ0Ujvj5GU9C8C_RtbS1stuCz67-vzy5XG&s=10"
+    alt="Iron Man Mark 85 Suit"
+    data-large=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2kKYEyx_WOTTWGOQQ-3l8xaoZ0Ujvj5GU9C8C_RtbS1stuCz67-vzy5XG&s=10">
+            <img
+    tabindex="0"
+    role="button"
+    src="https://i.pinimg.com/736x/cb/f3/a4/cbf3a4737da53caf9c7c7cb795a274fa.jpg"
+    alt="Iron Man Mark 85"
+    data-large="https://i.pinimg.com/736x/cb/f3/a4/cbf3a4737da53caf9c7c7cb795a274fa.jpg">
+
+        </div>
+
+    </div>
+
+    <script>
+        const mainImage = document.getElementById("mainImage");
+        const imageCaption = document.getElementById("imageCaption");
+        const thumbnails = document.querySelectorAll(".thumbnails img");
+
+        function selectThumbnail(thumbnail) {
+
+            mainImage.src = thumbnail.dataset.large || thumbnail.src;
+            mainImage.alt = thumbnail.alt;
+            imageCaption.textContent = thumbnail.alt;
+
+            thumbnails.forEach((item) => {
+                item.classList.remove("active");
+            });
+
+            thumbnail.classList.add("active");
+        }
+
+        thumbnails.forEach((thumbnail) => {
+
+            thumbnail.addEventListener("click", () => {
+                selectThumbnail(thumbnail);
+            });
+
+            thumbnail.addEventListener("keydown", (event) => {
+
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    selectThumbnail(thumbnail);
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
