@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt | Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">F</div>
+            <h2>FindIt<span>.</span></h2>
+        </div>
+
+        <p class="menu-label">MENU</p>
+
+        <nav>
+            <a href="#" class="nav-link active" id="homeNav">
+                <span>⌂</span> Dashboard
+            </a>
+            <a href="#itemsSection" class="nav-link">
+                <span>▤</span> All Items
+            </a>
+            <a href="#reportSection" class="nav-link">
+                <span>＋</span> Report Item
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-box">
+                <h4>Need help?</h4>
+                <p>Help someone find what they lost today.</p>
+            </div>
+            <p class="copyright">© 2026 FindIt Portal</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome">CAMPUS COMMUNITY</p>
+                <h1>Lost & Found Portal</h1>
+            </div>
+            <button class="primary-btn" id="openFormBtn">
+                + Report an Item
+            </button>
+        </header>
+
+        <section class="hero">
+            <div class="hero-text">
+                <span class="hero-tag">COMMUNITY FIRST</span>
+                <h2>Lost something?<br>Let's find it.</h2>
+                <p>A little help from your campus community can make a big difference.</p>
+                <button class="hero-btn" id="exploreBtn">Explore Items →</button>
+            </div>
+            <div class="hero-decoration">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+                <div class="hero-emoji">🔎</div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple">▤</div>
+                <p>Total Reports</p>
+                <h2 id="totalCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">⌕</div>
+                <p>Lost Items</p>
+                <h2 id="lostCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Found Items</p>
+                <h2 id="foundCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">★</div>
+                <p>Returned Items</p>
+                <h2 id="returnedCount">0</h2>
+            </div>
+        </section>
+
+        <section class="items-section" id="itemsSection">
+            <div class="section-heading">
+                <div>
+                    <p class="small-heading">CAMPUS COLLECTION</p>
+                    <h2>Recent Reports</h2>
+                </div>
+                <span id="resultCount">0 items</span>
+            </div>
+
+            <div class="filter-bar">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput"
+                           placeholder="Search items...">
+                </div>
+
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="All">All Status</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Found">Found</option>
+                    <option value="Returned">Returned</option>
+                </select>
+            </div>
+
+            <div class="items-grid" id="itemsGrid"></div>
+        </section>
+
+        <section class="report-section" id="reportSection">
+            <div class="form-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="small-heading">CONTRIBUTE TO YOUR CAMPUS</p>
+                        <h2>Report an Item</h2>
+                    </div>
+                </div>
+
+                <form id="itemForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Item Name</label>
+                            <input type="text" id="itemName"
+                                   placeholder="e.g. Black Headphones" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="itemCategory" required>
+                                <option value="">Select category</option>
+                                <option>Electronics</option>
+                                <option>Accessories</option>
+                                <option>Books</option>
+                                <option>Clothing</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="itemDescription"
+                                  placeholder="Describe the item..."
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" id="itemLocation"
+                                   placeholder="e.g. Library" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Report Type</label>
+                            <select id="itemStatus" required>
+                                <option value="Lost">Lost Item</option>
+                                <option value="Found">Found Item</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Reported By</label>
+                        <input type="text" id="itemPerson"
+                               placeholder="Your name" required>
+                    </div>
+
+                    <button type="submit" class="primary-btn submit-btn">
+                        Submit Report →
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with care for the campus community. <strong>FindIt.</strong></p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
